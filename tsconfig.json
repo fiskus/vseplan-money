@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "inlineSources": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "./public/",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "sourceRoot": "/",
+    "strictNullChecks": true,
+    "target": "es6"
+  },
+  "exclude": [
+  ]
+}
