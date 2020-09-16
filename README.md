@@ -4,9 +4,11 @@ Vseplan.Money: incomes/expenses tracker
 
 ## Development
 
-`npm install`
-`cp .env.example .env`
-`npm run dev`
+* `npm install`
+* `cp .env.example .env`
+* `npm run dev`
+
+Open http://localhost:3000
 
 
 ## Features
