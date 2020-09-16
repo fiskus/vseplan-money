@@ -6,13 +6,14 @@ import * as Container from './style';
 
 type AddBallProps = {
   onClick: () => void;
+  title: string;
 };
 
 const AddBall: FunctionComponent<AddBallProps> = (props: AddBallProps) => {
-  const { onClick } = props;
+  const { onClick, title } = props;
 
   return (
-    <Container.Wrapper>
+    <Container.Wrapper title={title}>
       <Container.Icon onClick={onClick}>
         <Icon
           size={64}

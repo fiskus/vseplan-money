@@ -12,6 +12,7 @@ import {
 import * as Container from './style';
 
 type CategoryListProps = {
+  addTitle: string;
   color: string;
   moneyUnits: CategoryNormalized;
   onAdd: () => void;
@@ -23,6 +24,7 @@ type CategoryListProps = {
 
 export default (props: CategoryListProps): ReactElement<CategoryListProps> => {
   const {
+    addTitle,
     color,
     moneyUnits,
     onAdd,
@@ -48,7 +50,7 @@ export default (props: CategoryListProps): ReactElement<CategoryListProps> => {
           </Container.Category>
         ))}
 
-        <AddBall onClick={onAdd} />
+        <AddBall onClick={onAdd} title={addTitle} />
       </Container.Inner>
     </Container.Wrapper>
   );

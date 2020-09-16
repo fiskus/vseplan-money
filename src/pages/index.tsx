@@ -42,6 +42,7 @@ const PageIndex: FC<RouteComponentProps> = (): ReactElement<void> => {
             onAdd={(): void => store.addIncome()}
             onEdit={noop}
             onRemove={noop}
+            addTitle="Add Income"
           />
         ) : null }
 
@@ -53,6 +54,7 @@ const PageIndex: FC<RouteComponentProps> = (): ReactElement<void> => {
         onEdit={noop}
         onRemove={noop}
         sourceType={UnitType.Income}
+        addTitle="Add wallet"
       />
 
       <CategoryList
@@ -63,6 +65,7 @@ const PageIndex: FC<RouteComponentProps> = (): ReactElement<void> => {
         onEdit={noop}
         onRemove={noop}
         sourceType={UnitType.Wallet}
+        addTitle="Add Expense"
       />
     </Layout>
   );
