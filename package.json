@@ -68,7 +68,7 @@
     "webpack-node-externals": "^2.5.0"
   },
   "scripts": {
-    "dev": "concurrently \"npm:server:dev:watch\"  \"npm:db\" \"npm:frontend:dev\" \"npm:server:dev:start\"",
+    "dev": "mkdir -p dist && touch dist/server.js && concurrently \"npm:server:build\"  \"npm:db\" \"npm:frontend:dev\" \"npm:server:dev:start\"",
     "db": "pouchdb-server -c pouchdb/config.json -d pouchdb -p 5984 -o 127.0.0.1 -n",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "frontend:build": "NODE_ENV=production webpack --config config/webpack.js",
