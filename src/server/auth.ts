@@ -4,6 +4,7 @@ import { FastifyInstance } from 'fastify';
 
 import { saveFacebookIdentity } from './users';
 import { signJwt } from './jwt';
+import logger from '../log';
 
 export function registerFacebookAuth(
   fastify: FastifyInstance,
@@ -13,7 +14,8 @@ export function registerFacebookAuth(
   const facebookId = process.env.AUTH_FACEBOOK_ID;
   const facebookSecret = process.env.AUTH_FACEBOOK_SECRET;
   if (!facebookId || !facebookSecret) {
-    throw new Error('Set Facebook ID and secret');
+    logger.error(new Error('Set Facebook ID and secret'));
+    return;
   }
 
   fastify.register(FastifyOauth2, {

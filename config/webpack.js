@@ -19,6 +19,7 @@ const plugins = [
   }),
 
   new webpack.EnvironmentPlugin({
+    AUTH_FACEBOOK_ID: '',
     NODE_ENV: 'development',
     SERVER_HOST: null,
   }),

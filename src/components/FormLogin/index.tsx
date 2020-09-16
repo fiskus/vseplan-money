@@ -9,11 +9,14 @@ const guestUrl = getApiUrl('/api/v1/login/guest');
 
 const LoginForm: FunctionComponent = (): ReactElement<void> => (
   <Container.Wrapper>
-    <Container.Button>
-      <ButtonLogin url={facebookUrl}>
-        Login via Facebook
-      </ButtonLogin>
-    </Container.Button>
+    { process.env.AUTH_FACEBOOK_ID
+      ? (
+        <Container.Button>
+          <ButtonLogin url={facebookUrl}>
+            Login via Facebook
+          </ButtonLogin>
+        </Container.Button>
+      ) : null }
 
     <Container.Button>
       <ButtonLogin url={guestUrl}>
